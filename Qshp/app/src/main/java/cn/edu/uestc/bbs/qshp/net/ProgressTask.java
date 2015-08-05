@@ -64,14 +64,17 @@ public class ProgressTask extends AsyncTask<Object,String,CommonReturn> {
         super.onPostExecute(result);
         if (result==null)
         {
-
+            return;
         }
         else if (result.isStatus())
         {
             if (listener!=null)
             {
-                listener.process(result);
+                listener.onTaskSuccess(result);
             }
+        }
+        else {
+            listener.onTaskFailed(result);
         }
     }
 }

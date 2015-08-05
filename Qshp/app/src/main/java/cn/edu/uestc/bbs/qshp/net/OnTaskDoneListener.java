@@ -7,5 +7,8 @@ package cn.edu.uestc.bbs.qshp.net;
  */
 public interface OnTaskDoneListener {
     //当网络请求成功完成之后会回调这个函数之后会
-    public void process(CommonReturn result);
+    public void onTaskSuccess(CommonReturn result);
+
+    //当网络请求失败时回调这个函数
+    public void onTaskFailed(CommonReturn result);
 }

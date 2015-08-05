@@ -7,9 +7,14 @@ package cn.edu.uestc.bbs.qshp.net;
  */
 public class CommonReturn {
     private String Message;
-    private String Data="";
+    private String Data;
     private boolean Status;
 
+    public CommonReturn() {
+        this.Message="";
+        this.Status=false;
+        this.Data="";
+    }
 
     public String getMessage() {
         return Message;

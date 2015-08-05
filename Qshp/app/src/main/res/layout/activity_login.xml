@@ -8,7 +8,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/et_login_password"
         android:hint="请输入用户名"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -17,9 +17,9 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/et_login_username"
         android:hint="请输入密码"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/et_login_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
@@ -27,9 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="验证"
-        android:onClick="login"
-        android:id="@+id/button"
-        android:layout_below="@+id/editText2"
+        android:id="@+id/bt_login"
+        android:layout_below="@+id/et_login_username"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
@@ -37,8 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="验证结果:\n"
-        android:id="@+id/textView"
-        android:layout_below="@+id/button"
+        android:id="@+id/tv_login_result"
+        android:layout_below="@+id/bt_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="73dp" />
 </RelativeLayout>
