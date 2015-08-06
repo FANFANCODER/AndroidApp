@@ -37,8 +37,14 @@ public class ProgressTask extends AsyncTask<Object,String,CommonReturn> {
         boolean isGet=(boolean)params[0];
         String url=(String)params[1];
         Map<String,String> param=(HashMap)params[2];
-
-        return null;
+        if (isGet)
+        {
+            return CommonHttpRequest.doGet(url,param);
+        }
+        else
+        {
+            return CommonHttpRequest.doPost(url,param);
+        }
     }
 
     //执行之前显示对话框
